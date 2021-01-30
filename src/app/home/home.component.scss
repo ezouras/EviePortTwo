@@ -1,0 +1,222 @@
+@import "variables";
+@import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+@font-face {
+  font-family: clipneon;
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/clip.ttf");
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./../../assets/early-cta.webp");
+  background-size: cover;
+}
+
+.home-container::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: $darkSkyGradient;
+}
+
+.billboard {
+  position: absolute;
+  left: 30%;
+  /* left: 100%; */
+  display: flex;
+  width: 62%;
+  height: 62%;
+}
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-webkit-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-moz-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-ms-keyframes move-clouds-back {
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.clouds {
+  //background: transparent url("http://www.script-tutorials.com/demos/360/images/clouds3.png") repeat top center;
+  background: transparent url("./../../assets/cloud4.png") repeat top center;
+  z-index: 2;
+  opacity: 0.2;
+  -moz-animation: move-clouds-back 200s linear infinite;
+  -ms-animation: move-clouds-back 200s linear infinite;
+  -o-animation: move-clouds-back 200s linear infinite;
+  -webkit-animation: move-clouds-back 200s linear infinite;
+  animation: move-clouds-back 400s linear infinite;
+}
+
+.neon-sign {
+  width: 30%;
+  /* display: flex; */
+  position: absolute;
+  left: 20%;
+  top: 70%;
+}
+
+.cocktail-sign {
+  /*
+-webkit-transform: matrix3d(0.77, 0, -0.64, -.001, 0.00, 1, 0.00, 0, 0.64, 0, 0.77, 0, 0, 0, 0, 1);
+*/
+  color: #F0D6DE;
+  font-family: clipneon;
+  font-size: 5vw;
+  line-height: 6vw;
+  margin-right: 2vw;
+  /*transform: matrix3d(0.77, 0, -0.64, -.001, 0.00, 1, 0.00, 0, 0.64, 0, 0.77, 0, 0, 0, 0, 1);*/
+  transform: matrix3d(4.4684, -0.261258, 0, 0.001133, 0.393218, 2.709256, 0, 0.000976, 0, 0, 1, 0,);
+}
+
+.cocktail-sign div {
+  text-shadow: 0.1vw 0 0.25vw #F0D6DE, 0.2vw 0 0.25vw #F0D6DE, 0.4vw 0 0.25vw #F0D6DE, 0.1vw 0 0.1vw #F181B2, 0.2vw 0 0 #F181B2, 0.4vw 0 0 #F181B2, 0.1vw 0 0.1vw #F181B2, 0.2vw 0 0.1vw #F181B2, 0.4vw 0 0 #F181B2, 0.1vw 0 1vw #F181B2, 0.2vw 0 2vw #F181B2, 0.4vw 0 2vw #F181B2, 0.2vw 0 5vw #F181B2, 0.1vw 0 0.5vw #F20B70, 0.2vw 0 0.5vw #F20B70, 0.4vw 0 6vw #F20B70, 0.1vw 0 4vw #F20B70, 0.2vw 0 20vw #F20B70, 0.4vw 0 10vw #F20B70, 0.1vw 0 10vw #F20B70, 0.2vw 0 30vw #F20B70, 0.4vw 0 10vw #F20B70;
+  width: 100%;
+  text-align: right;
+  line-height: 0.90em;
+}
+/*
+.cocktail-sign .icons {
+  text-shadow: none;
+  text-align: center;
+}*/
+.cocktail-sign div .arrow {
+  font-size: 0.8em;
+}
+
+.cocktail-sign div:first-child .arrow {
+  animation: chaser 0.8s infinite;
+  -moz-animation: chaser 0.8s infinite;
+  -webkit-animation: chaser 0.8s infinite;
+  -o-animation: chaser 0.8s infinite;
+}
+
+.cocktail-sign div:nth-child(2) .arrow {
+  animation: chaser 0.8s infinite;
+  -moz-animation: chaser 0.8s infinite;
+  -webkit-animation: chaser 0.8s infinite;
+  -o-animation: chaser 0.8s infinite;
+  animation-delay: 0.4s;
+}
+
+.cocktail-sign div:first-child .flicker {
+  animation: flicker 0.09s infinite;
+  -moz-animation: flicker 0.09s infinite;
+  -webkit-animation: flicker 0.09s infinite;
+  -o-animation: flicker 0.09s infinite;
+}
+
+.cocktail-sign div:nth-child(2) .flicker {
+  animation: flicker 0.1s infinite;
+  -moz-animation: flicker 0.1s infinite;
+  -webkit-animation: flicker 0.1s infinite;
+  -o-animation: flicker 0.1s infinite;
+  animation-delay: 0.2s;
+}
+@keyframes chaser {
+  40% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  90% {
+    opacity: 0.3;
+  }
+}
+@keyframes flicker {
+  0%,
+  100%,
+  84%,
+  90% {
+    color: #F0D6DE;
+    text-shadow: 0.1vw 0 0.25vw #F0D6DE, 0.2vw 0 0.25vw #F0D6DE, 0.4vw 0 0.25vw #F0D6DE, 0.1vw 0 0.1vw #F181B2, 0.2vw 0 0 #F181B2, 0.4vw 0 0 #F181B2, 0.1vw 0 0.1vw #F181B2, 0.2vw 0 0.1vw #F181B2, 0.4vw 0 0 #F181B2, 0.1vw 0 1vw #F181B2, 0.2vw 0 2vw #F181B2, 0.4vw 0 2vw #F181B2, 0.2vw 0 5vw #F181B2, 0.1vw 0 0.5vw #F20B70, 0.2vw 0 0.5vw #F20B70, 0.4vw 0 6vw #F20B70, 0.1vw 0 4vw #F20B70, 0.2vw 0 20vw #F20B70, 0.4vw 0 10vw #F20B70, 0.1vw 0 10vw #F20B70, 0.2vw 0 30vw #F20B70, 0.4vw 0 10vw #F20B70;
+  }
+
+  85%,
+  95% {
+    color: #8F5493;
+    text-shadow: 0.1vw 0 0.25vw #951c9c, 0.2vw 0 0.25vw #4c0a50, 0.4vw 0 0.25vw #791180, 0.1vw 0 0.1vw #850a8e, 0.2vw 0 0 #7e0b86, 0.4vw 0 0 #801088, 0.1vw 0 0.1vw #8f1098, 0.2vw 0 0.1vw #870c90, 0.4vw 0 0 #7a0e82, 0.1vw 0 1vw #6c0c73, 0.2vw 0 2vw #530d58, 0.4vw 0 2vw #8e1996, 0.2vw 0 5vw #76087d, 0.1vw 0 0.5vw #510b63, 0.2vw 0 0.5vw #4f0b61, 0.4vw 0 6vw #4a085a, 0.1vw 0 4vw #4f0c61, 0.2vw 0 20vw #4f0a61, 0.4vw 0 10vw #4a0a5a, 0.1vw 0 10vw #58086d, 0.2vw 0 30vw #270031, 0.4vw 0 10vw #15001b;
+  }
+}
