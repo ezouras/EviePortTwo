@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { shaderback } from "../libs/shaderback.js";
 
 @Component({
   selector: 'app-pfolio',
@@ -10,6 +11,7 @@ export class PfolioComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    shaderback.loadURL("../../assets/shader.txt")
   }
 
 }
