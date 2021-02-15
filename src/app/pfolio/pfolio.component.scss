@@ -1,6 +1,7 @@
 @import "variables";
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
 
 .transition-container {
   position: relative;
@@ -28,11 +29,12 @@
     flex-direction: column;
 
     .cock-row {
-      width: 90%;
+      width: 80%;
       display: flex;
       justify-content: space-between;
       background: $darkBack;
       margin: 2rem;
+      padding: 2rem;
       box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168);
 
       &:hover > .cock {
@@ -76,6 +78,18 @@
 
       .cock-explain {
         color: white;
+        width: 75%;
+        text-align: center;
+
+        .cock-explain-title {
+          font-size: 1.2rem;
+        }
+
+        .cock-explain-description {
+          font-size: 1rem;
+          font-weight: bold;
+          font-family: 'Lato', sans-serif;
+        }
       }
     }
   }
