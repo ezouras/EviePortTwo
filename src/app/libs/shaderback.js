@@ -106,10 +106,12 @@ export const shaderback = (function () {
   function ready() {
     var success = true;
     var div = document.createElement('div');
-    div.innerHTML = '<canvas #ngCanvas class="shaderback" id="shaderback" width="500px" height="500px" style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: -1;"></canvas>';
+    div.innerHTML = '<canvas class="shaderback" id="shaderback" width="500px" height="500px" style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: -1;"></canvas>';
     var elements = div.childNodes[0];
     document.getElementsByTagName('body')[0].appendChild(elements);
+    //document.getElementById('portContainer').appendChild(elements);
     canvas = document.getElementById("shaderback");
+
 
     if (!canvas) {
       success = false;
@@ -288,7 +290,6 @@ export const shaderback = (function () {
 
   // Set up the shader background
   function start(webgl2) {
-    console.log(webgl2);
     if (!running) {
       running = ready();
       resize();
@@ -375,6 +376,9 @@ export const shaderback = (function () {
       client.send();
     }
   }
+  function resetCanvas(){
+    running = false;
+  }
 
   // Externally exposed functions
   return {
@@ -382,6 +386,7 @@ export const shaderback = (function () {
     loaddiv : loaddiv,
     loadtext : loadtext,
     loadshadertoy : loadshadertoy,
-    setDebug : setDebug
+    setDebug : setDebug,
+    resetCanvas:resetCanvas
   };
 }());

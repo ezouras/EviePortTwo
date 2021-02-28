@@ -100,10 +100,15 @@
   position: relative;
 }
 
+.blackBerryBack {
+  background: black;
+}
+
 .tempt::after {
   opacity: 0;
   position: absolute;
-  top: 0;
+  top: 20%;
+  left: 32%;
   content: "click!";
   color: hotpink;
   animation: clickme 1s forwards;

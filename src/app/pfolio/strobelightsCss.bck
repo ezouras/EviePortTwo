@@ -1,3 +1,37 @@
+
+<!--  <div class="strob-container">
+  <div class="strobeContainer strobeContainerGoRight">
+    <div class="strobe pink"></div>
+  </div>
+  <div class="strobeContainer strobeContainerGoLeft">
+    <div class="strobe lightPurple delay1"></div>
+  </div>
+  <div class="strobeContainer strobeContainerGoRight">
+    <div class="starobe lightBlue delay2"></div>
+  </div>
+  <div class="strobeContainer strobeContainerGoLeft">
+    <div class="strobe pinkPurple delay1"></div>
+  </div>
+  <div class="strobeContainer strobeContainerGoRight">
+    <div class="strobe brightGreen"></div>
+  </div>
+  <div class="strobeContainer strobeContainerGoLeft">
+    <div class="strobe mauve delay2"></div>
+  </div>
+  <div class="strobeContainer strobeContainerGoRight">
+    <div class="strobe purple delay1"></div>
+  </div>
+  <div class="strobeContainer strobeContainerGoLeft">
+    <div class="strobe seaweed"></div>
+  </div>
+  <div class="strobeContainer strobeContainerGoRight">
+    <div class="strobe pink delay1"></div>
+  </div>
+  <div class="strobeContainer strobeContainerGoLeft">
+    <div class="strobe lightBlue"></div>
+  </div>
+</div>-->
+
 /**lights aanimations**/
 .strobeContainer {
   padding-top: $strobeBarContainerPadding;
