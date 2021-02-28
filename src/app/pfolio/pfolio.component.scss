@@ -27,6 +27,7 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .cock-row {
       width: 80%;
@@ -82,11 +83,11 @@
         text-align: center;
 
         .cock-explain-title {
-          font-size: 1.2rem;
+          font-size: 2rem;
         }
 
         .cock-explain-description {
-          font-size: 1rem;
+          font-size: 1.5rem;
           font-weight: bold;
           font-family: 'Lato', sans-serif;
         }
@@ -413,5 +414,29 @@ span {
 
   100% {
     opacity: 1;
+  }
+}
+@media only screen and (max-width:750px) {
+  .transition-container {
+    .neon {
+      font-size: 2.5rem;
+      padding-top: 1rem;
+      letter-spacing: 0.2rem;
+      text-shadow: 0 0 2px #fff, 0 0 0 #fff, 0 0 9px #fff, 0 0 2px #0ff, 0 0 1px #0ff, 0 0 1px #0ff, 0 0 20px #0ff, 0 0 15px #0ff;
+    }
+
+    .cocktails {
+      .cock-row {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+
+  .exit {
+    h1 {
+      font-size: 3rem;
+    }
   }
 }
