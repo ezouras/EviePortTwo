@@ -4,7 +4,7 @@
   </div>
   <div class="cocktails">
     <div class="cock-row">
-      <div inViewport (inViewportAction)="tempt($event)" class="cock">
+      <div (tap)="onTap('https://www.laurenbriddell.com/index.html')" inViewport (inViewportAction)="tempt($event)" class="cock">
         <img src="./../../assets/cocktails/caipirinha.svg" alt="">
         <a class="tryCock" href="https://www.laurenbriddell.com/index.html" target="_blank">Try!</a>
       </div>
@@ -24,14 +24,14 @@
           JQuery, and NodeJS express!
         </div>
       </div>
-      <div inViewport (inViewportAction)="tempt($event)" class="cock">
+      <div (tap)="onTap('http://sfxbygel.com/')" inViewport (inViewportAction)="tempt($event)" class="cock">
         <img src="./../../assets/cocktails/cocktail.svg" alt="">
         <a class="tryCock" href="http://sfxbygel.com/" target="_blank">Try!</a>
       </div>
 
     </div>
     <div class="cock-row">
-      <div inViewport (inViewportAction)="tempt($event)" class="cock">
+      <div (tap)="onTap('http://bellaveats.com/')" inViewport (inViewportAction)="tempt($event)" class="cock">
         <img src="./../../assets/cocktails/cocktail2.svg" alt="">
         <a class="tryCock" href="http://bellaveats.com/" target="_blank">Try!</a>
       </div>
@@ -44,7 +44,7 @@
 
     </div>
     <div class="cock-row">
-      <div inViewport (inViewportAction)="tempt($event)" class="cock">
+      <div (tap)="onTap('http://teenhelpnow.com/')" inViewport (inViewportAction)="tempt($event)" class="cock">
         <img src="./../../assets/cocktails/ice-tea.svg" alt="">
         <a class="tryCock" href="http://teenhelpnow.com/" target="_blank">Try!</a>
       </div>

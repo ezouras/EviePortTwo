@@ -55,6 +55,10 @@ export class PfolioComponent implements OnInit {
       }
     })
   }
+  onTap(url) {
+    console.log("tappd")
+    window.open(url, '_blank');
+  }
   routeHome() {
     this.router.navigate(['/home']);
   }
