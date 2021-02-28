@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PfolioComponent } from './pfolio/pfolio.component';
 import { ByebyeComponent } from './byebye/byebye.component';
+import { InViewportModule } from "ng-in-viewport";
 
 // particular imports for hammer
 import * as Hammer from 'hammerjs';
@@ -29,7 +30,8 @@ export class MyHammerConfig extends HammerGestureConfig {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    InViewportModule
   ],
   providers: [
     {

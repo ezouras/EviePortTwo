@@ -106,7 +106,7 @@ export const shaderback = (function () {
   function ready() {
     var success = true;
     var div = document.createElement('div');
-    div.innerHTML = '<canvas class="shaderback" id="shaderback" width="500px" height="500px" style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: -1;"></canvas>';
+    div.innerHTML = '<canvas #ngCanvas class="shaderback" id="shaderback" width="500px" height="500px" style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: -1;"></canvas>';
     var elements = div.childNodes[0];
     document.getElementsByTagName('body')[0].appendChild(elements);
     canvas = document.getElementById("shaderback");

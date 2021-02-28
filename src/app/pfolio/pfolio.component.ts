@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { shaderback } from "../libs/shaderback.js";
 import { Router } from "@angular/router"
+import { InViewportMetadata } from 'ng-in-viewport';
 import { Observable, fromEvent } from 'rxjs';
 import { debounceTime, throttleTime } from "rxjs/operators"
 
@@ -11,11 +12,12 @@ import { debounceTime, throttleTime } from "rxjs/operators"
 })
 export class PfolioComponent implements OnInit {
   @ViewChild("portContainer", { static: false }) portContainer: ElementRef;
+  @ViewChild('ngcanvas', { static: false }) canvas: any;
   mousePadSlide$: Observable<any>;
   /*  windowHeight: number;
     innerWindowHeight: number;*/
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private renderer: Renderer2) { }
 
   ngOnInit() {
     var ua = navigator.userAgent;
@@ -53,6 +55,9 @@ export class PfolioComponent implements OnInit {
         }
       }
     })
+    console.log("canvas is ", this.canvas)
+    console.log("canvas is ")
+
 
   }
   routeHome() {
@@ -64,6 +69,32 @@ export class PfolioComponent implements OnInit {
 
   onMouseWheel($event) {
     $event.deltaY > 0 ? this.routeBye() : this.routeHome();
+
+  }
+
+  tempt(event) {
+    //const { [InViewportMetadata]: { entry }, visible } = event;
+    //[inViewportOptions]="{ partial: true, threshold: [0, 1] }"
+    const { visible, target } = event;
+    if (visible)
+      this.renderer.addClass(target, "tempt");
+
+    console.log("in tempt", visible)
+  }
+
+  ngOnDestroy() {
+    console.log("Destroy Port!")
+    let c = document.getElementById("shaderback")
+    c.remove();
+    /*var myobj = document.getElementById("demo");
+myobj.remove();
+let ctx = c.getContext('2d');
+    console.log("c", c)
+    console.log("ctx is ", ctx)
+    if (ctx) {
+      ctx.clearRect(0, 0, c.width, c.height);
+    }
+*/
 
   }
 

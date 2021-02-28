@@ -11,6 +11,11 @@ export class ByebyeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    /*var c = document.getElementById("shaderback");
+    if (c) {
+      var ctx = c.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }*/
   }
 
 }
