@@ -1,10 +1,13 @@
-<div (wheel)="onMouseWheel($event)" class="byeContainer">
+<div #byeContainer (click)="routeHome()" class="byeContainer">
   <div class="underConstruction">
     <div class="code">
       &lt;/still&gt;
     </div>
     <div class="code">
       &lt;/building&gt;
+    </div>
+    <div class="code backhome">
+      &lt;/ToTheTop&gt;
     </div>
     <div class="buildingMessage">
       Working day and night!

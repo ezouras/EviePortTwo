@@ -1,13 +1,17 @@
 @import "variables";
 
 .byeContainer {
+  padding-top: 2rem;
   position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #41cbb8;
+  background-image: url("./../../assets/brick-wall.jpg");
+  background-size: cover;
 
   .underConstruction {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: black;
     font-size: 3rem;
     font-weight: bold;
 
@@ -21,11 +25,18 @@
   }
 }
 
+.backhome {
+  cursor: pointer;
+}
+
+.backhome:hover {
+  color: lime;
+}
+
 .building {
   background-image: url("./../../assets/brick-wall.jpg");
 }
-
-svg {
+/*svg {
   max-width: 100%;
   margin: 0 auto;
   display: block;
@@ -122,3 +133,4 @@ canvas {
   transform: translateX(200%);
   animation: anim 1000s linear infinite forwards;
 }
+*/
